@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Externals\Submodules\hotel-sdk\Hotel-Sdk\Hotel-Sdk.csproj" />
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\oski-testing\Tavisca.Automation.Utilities\Tavisca.Automation.Utilities.csproj" />
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.csproj" />
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\TestLogger\PerformanceTests.TestLogger.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C589F161-0809-4F05-A5BA-27D24546FE9A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestRunner</RootNamespace>
+    <AssemblyName>TestRunner</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Externals\Submodules\nextgen-performance-core\NetTestRunner\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="..\Externals\Submodules\nextgen-performance-core\NetTestRunner\TestRunnerSettings.cs">
+      <Link>TestRunnerSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Externals\Submodules\nextgen-performance-core\NetTestRunner\Timer.cs">
+      <Link>Timer.cs</Link>
+    </Compile>
+    <Compile Include="BESearchTest.cs" />
+    <Compile Include="MyHotelLogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchCriteria.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Externals\Submodules\hotel-sdk\Hotel-Sdk\Hotel-Sdk.csproj">
+      <Project>{3d5b80d1-25cc-4d37-ad91-b097eb6a5c89}</Project>
+      <Name>Hotel-Sdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\oski-testing\Tavisca.Automation.Utilities\Tavisca.Automation.Utilities.csproj">
+      <Project>{2bacc0f7-1093-452e-9bcf-eccb58f8b6e1}</Project>
+      <Name>Tavisca.Automation.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.csproj">
+      <Project>{ab914ba9-0038-43fc-9dda-e9553abe3850}</Project>
+      <Name>Tavisca.Common.Plugins.Aws</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Consul\Tavisca.Common.Plugins.Configuration.csproj">
+      <Project>{9578cb32-2083-4b2b-80f7-5c95298fa03b}</Project>
+      <Name>Tavisca.Common.Plugins.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.csproj">
+      <Project>{eb73bcb8-ee4b-4ceb-ab47-0ab86e51408a}</Project>
+      <Name>Tavisca.Common.Plugins.RecyclableStreamPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.csproj">
+      <Project>{d8f79165-0b4e-41e8-9ebf-d1db5183358b}</Project>
+      <Name>Tavisca.Common.Plugins.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.csproj">
+      <Project>{0e282446-4149-4819-974e-fe23ecb10c72}</Project>
+      <Name>Tavisca.Platform.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.csproj">
+      <Project>{6e51c703-f680-45ac-b76e-774176175de3}</Project>
+      <Name>Tavisca.Platform.Common.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.csproj">
+      <Project>{68b980e4-eb86-4883-a7ef-a14a1e133136}</Project>
+      <Name>Tavisca.Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\TestLogger\PerformanceTests.TestLogger.csproj">
+      <Project>{a8eb2ff8-b9a4-496c-aa89-146ff3cf979e}</Project>
+      <Name>PerformanceTests.TestLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\TestRunner.Core\TestRunner.Core.csproj">
+      <Project>{2e02053f-907c-46c1-adca-da849d40c171}</Project>
+      <Name>TestRunner.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <!--ItemGroup>
+    <ProjectReference Include="..\Externals\Submodules\hotel-sdk\Hotel-Sdk\Hotel-Sdk.csproj">
+      <Project>{3d5b80d1-25cc-4d37-ad91-b097eb6a5c89}</Project>
+      <Name>Hotel-Sdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\NetTestRunner\NetTestRunner.csproj">
+      <Project>{8a7e98f0-3b7b-4aae-b1eb-0ad2147016aa}</Project>
+      <Name>NetTestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\oski-testing\Tavisca.Automation.Utilities\Tavisca.Automation.Utilities.csproj">
+      <Project>{2bacc0f7-1093-452e-9bcf-eccb58f8b6e1}</Project>
+      <Name>Tavisca.Automation.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.csproj">
+      <Project>{ab914ba9-0038-43fc-9dda-e9553abe3850}</Project>
+      <Name>Tavisca.Common.Plugins.Aws</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Consul\Tavisca.Common.Plugins.Configuration.csproj">
+      <Project>{9578cb32-2083-4b2b-80f7-5c95298fa03b}</Project>
+      <Name>Tavisca.Common.Plugins.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.csproj">
+      <Project>{eb73bcb8-ee4b-4ceb-ab47-0ab86e51408a}</Project>
+      <Name>Tavisca.Common.Plugins.RecyclableStreamPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.csproj">
+      <Project>{d8f79165-0b4e-41e8-9ebf-d1db5183358b}</Project>
+      <Name>Tavisca.Common.Plugins.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.csproj">
+      <Project>{0e282446-4149-4819-974e-fe23ecb10c72}</Project>
+      <Name>Tavisca.Platform.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.csproj">
+      <Project>{6e51c703-f680-45ac-b76e-774176175de3}</Project>
+      <Name>Tavisca.Platform.Common.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.csproj">
+      <Project>{68b980e4-eb86-4883-a7ef-a14a1e133136}</Project>
+      <Name>Tavisca.Platform.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\TestLogger\PerformanceTests.TestLogger.csproj">
+      <Project>{a8eb2ff8-b9a4-496c-aa89-146ff3cf979e}</Project>
+      <Name>PerformanceTests.TestLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\Submodules\nextgen-performance-core\TestRunner.Core\TestRunner.Core.csproj">
+      <Project>{2e02053f-907c-46c1-adca-da849d40c171}</Project>
+      <Name>TestRunner.Core</Name>
+    </ProjectReference>
+  </ItemGroup-->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
