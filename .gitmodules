@@ -1,8 +1,8 @@
-[submodule "Externals/Submodules"]
-	path = Submodules
-	url = git@github.com:TaviscaSolutions/nextgen-performance-core.git
-	branch = develop
-[submodule "Externals/Submodules"]
-	path = Submodules
+[submodule "Externals/Submodules/hotel-sdk"]
+	path = Externals/Submodules/hotel-sdk
 	url = git@github.com:TaviscaSolutions/hotel-sdk.git
+	branch = develop
+[submodule "Externals/Submodules/nextgen-performance-core"]
+	path = Externals/Submodules/nextgen-performance-core
+	url = git@github.com:TaviscaSolutions/nextgen-performance-core.git
 	branch = develop
