@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tavisca.Hotel.Core.Performance", "Tavisca.Hotel.Core.Performance\Tavisca.Hotel.Core.Performance.csproj", "{C589F161-0809-4F05-A5BA-27D24546FE9A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{9B00A07C-31C5-4A0A-AF37-590B551FB089}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
