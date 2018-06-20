@@ -6,3 +6,12 @@
 	path = Submodules
 	url = git@github.com:TaviscaSolutions/hotel-sdk.git
 	branch = develop
+[submodule "Externals/hotel-sdk"]
+	path = Externals/hotel-sdk
+	url = git@github.com:TaviscaSolutions/hotel-sdk.git
+[submodule "Externals/platform-common"]
+	path = Externals/platform-common
+	url = git@github.com:TaviscaSolutions/platform-common.git
+[submodule "Externals/nextgen-performance-core"]
+	path = Externals/nextgen-performance-core
+	url = git@github.com:TaviscaSolutions/nextgen-performance-core.git
