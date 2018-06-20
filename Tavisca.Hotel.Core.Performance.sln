@@ -3,9 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tavisca.Hotel.Core.Performance", "Tavisca.Hotel.Core.Performance\Tavisca.Hotel.Core.Performance.csproj", "{C589F161-0809-4F05-A5BA-27D24546FE9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Hotel.Core.Performance", "Tavisca.Hotel.Core.Performance\Tavisca.Hotel.Core.Performance.csproj", "{C589F161-0809-4F05-A5BA-27D24546FE9A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{9B00A07C-31C5-4A0A-AF37-590B551FB089}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hotel-sdk", "Externals\hotel-sdk\hotel-sdk.csproj", "{938C5C6E-4C0B-4712-8726-1293E8BC18AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetTestRunner", "Externals\nextgen-performance-core\NetTestRunner\NetTestRunner.csproj", "{4356E1C6-6171-4342-8937-2555061A13B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C589F161-0809-4F05-A5BA-27D24546FE9A} = {C589F161-0809-4F05-A5BA-27D24546FE9A}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceTests.TestLogger", "Externals\nextgen-performance-core\TestLogger\PerformanceTests.TestLogger.csproj", "{881B5DA9-8D8C-48A7-875D-F81383AE7E30}"
+	ProjectSection(ProjectDependencies) = postProject
+		{938C5C6E-4C0B-4712-8726-1293E8BC18AF} = {938C5C6E-4C0B-4712-8726-1293E8BC18AF}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestRunner.Core", "Externals\nextgen-performance-core\TestRunner.Core\TestRunner.Core.csproj", "{828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Aws.Core", "Externals\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Aws\Tavisca.Common.Plugins.Aws.Core.csproj", "{3FBD4302-558F-4BB1-9DF0-95AC3C0F6070}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Configuration.Core", "Externals\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Configuration\Tavisca.Common.Plugins.Configuration.Core.csproj", "{B6E68E9F-E23F-4752-9131-5C341D5EBF69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.RecyclableStreamPool.Core", "Externals\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.RecyclableStreamPool\Tavisca.Common.Plugins.RecyclableStreamPool.Core.csproj", "{72C503B6-0A01-4871-804A-984698ADEF45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Common.Plugins.Redis.Core", "Externals\nextgen-performance-core\platform-common\Tavisca.Common.Plugins.Redis\Tavisca.Common.Plugins.Redis.Core.csproj", "{398BC13B-C40C-42E2-9FEB-08D3BEFEC345}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Core", "Externals\nextgen-performance-core\platform-common\Tavisca.Platform.Common\Tavisca.Platform.Common.Core.csproj", "{3E92B39B-B857-4A5D-B327-B43E7A3E9F20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Models.Core", "Externals\nextgen-performance-core\platform-common\Tavisca.Platform.Common.Models\Tavisca.Platform.Common.Models.Core.csproj", "{6CF0D875-3F7E-4BB1-A276-74BA096C62A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Platform.Common.Plugins.Json.Core", "Externals\nextgen-performance-core\platform-common\Tavisca.Platform.Common.Plugins.Json\Tavisca.Platform.Common.Plugins.Json.Core.csproj", "{50A6E872-B133-46A0-BB35-EA836B9BD08E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +45,66 @@ Global
 		{C589F161-0809-4F05-A5BA-27D24546FE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C589F161-0809-4F05-A5BA-27D24546FE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C589F161-0809-4F05-A5BA-27D24546FE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938C5C6E-4C0B-4712-8726-1293E8BC18AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938C5C6E-4C0B-4712-8726-1293E8BC18AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938C5C6E-4C0B-4712-8726-1293E8BC18AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938C5C6E-4C0B-4712-8726-1293E8BC18AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4356E1C6-6171-4342-8937-2555061A13B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4356E1C6-6171-4342-8937-2555061A13B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4356E1C6-6171-4342-8937-2555061A13B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4356E1C6-6171-4342-8937-2555061A13B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881B5DA9-8D8C-48A7-875D-F81383AE7E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881B5DA9-8D8C-48A7-875D-F81383AE7E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881B5DA9-8D8C-48A7-875D-F81383AE7E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881B5DA9-8D8C-48A7-875D-F81383AE7E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBD4302-558F-4BB1-9DF0-95AC3C0F6070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBD4302-558F-4BB1-9DF0-95AC3C0F6070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBD4302-558F-4BB1-9DF0-95AC3C0F6070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBD4302-558F-4BB1-9DF0-95AC3C0F6070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6E68E9F-E23F-4752-9131-5C341D5EBF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E68E9F-E23F-4752-9131-5C341D5EBF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E68E9F-E23F-4752-9131-5C341D5EBF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E68E9F-E23F-4752-9131-5C341D5EBF69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C503B6-0A01-4871-804A-984698ADEF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C503B6-0A01-4871-804A-984698ADEF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C503B6-0A01-4871-804A-984698ADEF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C503B6-0A01-4871-804A-984698ADEF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398BC13B-C40C-42E2-9FEB-08D3BEFEC345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398BC13B-C40C-42E2-9FEB-08D3BEFEC345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398BC13B-C40C-42E2-9FEB-08D3BEFEC345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398BC13B-C40C-42E2-9FEB-08D3BEFEC345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E92B39B-B857-4A5D-B327-B43E7A3E9F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E92B39B-B857-4A5D-B327-B43E7A3E9F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E92B39B-B857-4A5D-B327-B43E7A3E9F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E92B39B-B857-4A5D-B327-B43E7A3E9F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF0D875-3F7E-4BB1-A276-74BA096C62A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF0D875-3F7E-4BB1-A276-74BA096C62A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF0D875-3F7E-4BB1-A276-74BA096C62A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF0D875-3F7E-4BB1-A276-74BA096C62A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A6E872-B133-46A0-BB35-EA836B9BD08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A6E872-B133-46A0-BB35-EA836B9BD08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A6E872-B133-46A0-BB35-EA836B9BD08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A6E872-B133-46A0-BB35-EA836B9BD08E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{938C5C6E-4C0B-4712-8726-1293E8BC18AF} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{4356E1C6-6171-4342-8937-2555061A13B3} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{881B5DA9-8D8C-48A7-875D-F81383AE7E30} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{3FBD4302-558F-4BB1-9DF0-95AC3C0F6070} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{B6E68E9F-E23F-4752-9131-5C341D5EBF69} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{72C503B6-0A01-4871-804A-984698ADEF45} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{398BC13B-C40C-42E2-9FEB-08D3BEFEC345} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{3E92B39B-B857-4A5D-B327-B43E7A3E9F20} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{6CF0D875-3F7E-4BB1-A276-74BA096C62A1} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
+		{50A6E872-B133-46A0-BB35-EA836B9BD08E} = {9B00A07C-31C5-4A0A-AF37-590B551FB089}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7B2D23BE-FBD8-4B34-8FDF-038DACC5B16F}

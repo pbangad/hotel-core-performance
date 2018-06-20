@@ -5,9 +5,9 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using TestRunner;
 using Tavisca.Platform.Common.Logging;
 using Tavisca.Platform.Common.Plugins.Json;
+using TestRunner;
 
 namespace TestLibraryHotel
 {
