@@ -4,15 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tavisca.Hotel.Core.Performance", "Tavisca.Hotel.Core.Performance\Tavisca.Hotel.Core.Performance.csproj", "{C589F161-0809-4F05-A5BA-27D24546FE9A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4356E1C6-6171-4342-8937-2555061A13B3} = {4356E1C6-6171-4342-8937-2555061A13B3}
+		{828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5} = {828DB0FE-5D24-4FA5-AEE7-C70D22B83AA5}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{9B00A07C-31C5-4A0A-AF37-590B551FB089}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hotel-sdk", "Externals\hotel-sdk\hotel-sdk.csproj", "{938C5C6E-4C0B-4712-8726-1293E8BC18AF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetTestRunner", "Externals\nextgen-performance-core\NetTestRunner\NetTestRunner.csproj", "{4356E1C6-6171-4342-8937-2555061A13B3}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C589F161-0809-4F05-A5BA-27D24546FE9A} = {C589F161-0809-4F05-A5BA-27D24546FE9A}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceTests.TestLogger", "Externals\nextgen-performance-core\TestLogger\PerformanceTests.TestLogger.csproj", "{881B5DA9-8D8C-48A7-875D-F81383AE7E30}"
 	ProjectSection(ProjectDependencies) = postProject

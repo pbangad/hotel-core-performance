@@ -4,7 +4,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Externals\hotel-sdk\hotel-sdk.csproj" />
+    <ProjectReference Include="..\Externals\nextgen-performance-core\NetTestRunner\NetTestRunner.csproj" />
     <ProjectReference Include="..\Externals\nextgen-performance-core\TestLogger\PerformanceTests.TestLogger.csproj" />
-    <ProjectReference Include="..\Externals\nextgen-performance-core\TestRunner.Core\TestRunner.Core.csproj" />
   </ItemGroup>
 </Project>
